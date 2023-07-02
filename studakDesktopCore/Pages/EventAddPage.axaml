@@ -1,0 +1,163 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:model="clr-namespace:studakDesktopCore.Model"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="studakDesktopCore.Pages.EventAddPage">
+    
+    <UserControl.Resources>
+        <model:OrganizationData x:Key="Organization"/>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                   Text="Введите данные о мероприятии"
+                   FontSize="28"
+                   HorizontalAlignment="Center"
+                   Margin="15"/>
+        <TextBlock Grid.Column="0" Grid.Row="1"
+                   Text="Организация: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="1" Grid.Row="1"
+                  Width="300"
+                  HorizontalAlignment="Left"
+                  x:Name="OrgComboBox"
+                  SelectedItem="{Binding SelectedValue, Mode=TwoWay}"
+                  VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="0" Grid.Row="2"
+                   Text="Ответственный: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <ComboBox Grid.Column="1" Grid.Row="2"
+                  Width="300"
+                  HorizontalAlignment="Left"
+                  x:Name="PersonComboBox"
+                  SelectedItem="{Binding SelectedValue, Mode=TwoWay}"
+                  VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="0" Grid.Row="3"
+                   Text="Название: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="3"
+                 Height="12"
+                 x:Name="Name"
+                 Width="300"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="4"
+                   Text="Описание: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="4"
+                 Height="12"
+                 x:Name="Description"
+                 Width="300"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="5"
+                   Text="Дата начала: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="5"
+                 Height="12"
+                 x:Name="StartDate"
+                 Width="300"
+                 Watermark="дд.мм.гггг"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="6"
+                   Text="Дата конца: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="6"
+                 Height="12"
+                 x:Name="EndDate"
+                 Width="300"
+                 Watermark="дд.мм.гггг"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="7"
+                   Text="Время начала: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="7"
+                 Height="12"
+                 x:Name="StartTime"
+                 Width="300"
+                 Watermark="чч:мм"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="8"
+                   Text="Время конца: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="8"
+                 Height="12"
+                 x:Name="EndTime"
+                 Width="300"
+                 Watermark="чч:мм"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="9"
+                   Text="Баллы: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="9"
+                 Height="12"
+                 x:Name="Rate"
+                 Width="300"
+                 HorizontalAlignment="Left"/>
+        
+        <ProgressBar Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="11" x:Name="Loader"
+                                    Foreground="#8959EF"
+                                    IsIndeterminate="True"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Width="100" Height="20" 
+                                    IsVisible="False"/>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="11" x:Name="ErrorsLine"
+                                  HorizontalAlignment="Center"
+                                  Margin="5"/>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="3">
+        <Button Content="Сохранить"
+                HorizontalAlignment="Center"
+                Background="#8959EF"
+                Foreground="white"
+                x:Name="SaveUserBtn"
+                Click="SaveUserBtn_OnClick"
+                Margin="0 0 20 0"/>
+        <Button Content="Назад"
+                HorizontalAlignment="Center"
+                x:Name="BackBtn"
+                Click="BackBtn_OnClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

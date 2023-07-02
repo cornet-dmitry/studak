@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="studakDesktopCore/App.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/AuthWindow.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/MainWindow.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/Pages/AuthPage.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/Pages/EventAddPage.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/Pages/EventDataPage.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/Pages/EventPage.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/Pages/UserEditPage.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/Pages/UserPage.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+        <entry key="studakDesktopCore/TestWindiw.axaml" value="studakDesktopCore/studakDesktopCore.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

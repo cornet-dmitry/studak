@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="studakDesktopCore.Pages.EventDataPage">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0"
+                    Background="#F4F7FC">
+    <StackPanel Orientation="Horizontal"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+        <TextBlock x:Name="PageName"
+                   Text="Мероприятие"
+                   FontSize="24"
+                   Margin="15"/>
+        <Button x:Name="BackBtn"
+                Click="BackBtn_OnClick"
+                Content="Назад"
+                Margin="50 15 15 15"
+                Background="#8959EF"
+                Foreground="white"/>
+    </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Background="#F4F7FC">
+            <TextBlock x:Name="Organization"
+                       Text="Организация: "
+                       FontSize="18"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Left"
+                       Margin="40 5 5 5"/>
+            <TextBlock x:Name="Responsible"
+                       Text="Ответственный: "
+                       FontSize="18"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Left"
+                       Margin="40 5 5 5"/>
+            <TextBlock x:Name="Description"
+                       Text="Описание: "
+                       FontSize="18"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Left"
+                       Margin="40 20 5 20"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="Date"
+                           Text="Даты проведения: "
+                           FontSize="18"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           Margin="40 5 5 5"/>
+                <TextBlock x:Name="Time"
+                           Text=""
+                           FontSize="18"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           Margin="5"/>
+            </StackPanel>
+            <TextBlock x:Name="Rate"
+                       Text="Баллы за мероприятие: "
+                       FontSize="18"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Left"
+                       Margin="40 20 5 15"/>
+        </StackPanel>
+    </Grid>
+    
+</UserControl>

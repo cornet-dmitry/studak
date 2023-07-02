@@ -1,0 +1,136 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="studakDesktopCore.Pages.UserEditPage">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"
+                   Text="Введите новые значение пользователя"
+                   FontSize="28"
+                   HorizontalAlignment="Center"
+                   Margin="15"/>
+        <TextBlock Grid.Column="0" Grid.Row="1"
+                   Text="Фамилия: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="1"
+                 x:Name="Surname"
+                 Height="12"
+                 Width="300"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="2"
+                   Text="Имя: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="2"
+                 Height="12"
+                 x:Name="Name"
+                 Width="300"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="3"
+                   Text="Отчество: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="3"
+                 Height="12"
+                 x:Name="Patronymic"
+                 Width="300"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="4"
+                   Text="Дата рождения: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="4"
+                 Height="12"
+                 x:Name="BirthDay"
+                 Width="300"
+                 Watermark="дд.мм.гггг"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="5"
+                   Text="Номер телефона: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="5"
+                 Height="12"
+                 x:Name="Phone"
+                 Width="300"
+                 Watermark="88005553535"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="6"
+                   Text="Электронная почта: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="6"
+                 Height="12"
+                 x:Name="Email"
+                 Width="300"
+                 Watermark="mail@main.ru"
+                 HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="0" Grid.Row="7"
+                   Text="Ссылка на соц.сети: "
+                   FontSize="22"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"/>
+        <TextBox Grid.Column="1" Grid.Row="7"
+                 Height="12"
+                 x:Name="Messenger"
+                 Width="300"
+                 Watermark="vk.com/durov1 | tg.me/durov1"
+                 HorizontalAlignment="Left"/>
+        <ProgressBar Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" x:Name="Loader"
+                                    Foreground="#8959EF"
+                                    IsIndeterminate="True"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    Width="100" Height="20" 
+                                    IsVisible="False"/>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" x:Name="ErrorsLine"
+                                  HorizontalAlignment="Center"
+                                  Text=""
+                                  Margin="5"/>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="9"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="3">
+            <Button Content="Сохранить"
+                    HorizontalAlignment="Center"
+                    Background="#8959EF"
+                    Foreground="white"
+                    x:Name="SaveUserBtn"
+                    Margin="0 0 20 0"
+                    Click="SaveUserBtn_OnClick"/>
+            <Button Content="Назад"
+                    HorizontalAlignment="Center"
+                    x:Name="BackBtn"
+                    Click="BackBtn_OnClick"/>
+        </StackPanel>
+    </Grid>
+    
+    
+</UserControl>
